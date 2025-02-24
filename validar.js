@@ -1,8 +1,17 @@
 function validar(form) {
+    
     // Validar nombre
     var nombre = form.nombre.value.trim();
+    // Expresión regular para detectar etiquetas HTML
+    var regexEtiquetas = /<[\w]*>/;
+    
     if (nombre === "") {
         alert("Por favor, ingrese su nombre.");
+        return false;
+    }
+    // Validar que no contenga etiquetas HTML
+    if (regexEtiquetas.test(nombre)) {
+        alert("No se permiten etiquetas HTML en el nombre.");
         return false;
     }
 
