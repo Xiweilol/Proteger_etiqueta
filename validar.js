@@ -35,7 +35,7 @@ function validar(form) {
         alert("Por favor, seleccione un deporte favorito.");
         return false;
     }
-
+    alert("SI logro entrar");
     // Si todo es válido
     return true;
 }
